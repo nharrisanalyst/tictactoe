@@ -28,22 +28,3 @@ return {type:Restart};
 export function Start(x_o){
    return {type:Start_Game, turn:x_o};
 }
-
-
-function moveThunk(index){
-  return function(dispatch,getState)
-
-  dispatch(executeMove(index))
-  const boardObject = getState().board
-  let board = [];
-     boardObject.forEach((obj,i)=>{
-       board.push(obj.text)
-     });
-  const compMoveIndex =minMax
-  dispatch(executeMove())
-
-
-
-
-
-}
